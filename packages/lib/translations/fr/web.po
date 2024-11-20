@@ -8,7 +8,7 @@ msgstr ""
 "Language: fr\n"
 "Project-Id-Version: documenso-app\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-11-12 05:45\n"
+"PO-Revision-Date: 2024-11-20 11:56\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -50,19 +50,19 @@ msgstr "\"{placeholderEmail}\" au nom de \"{0}\" vous a invité à signer \"exem
 msgid "\"{teamUrl}\" has invited you to sign \"example document\"."
 msgstr "\"{teamUrl}\" vous a invité à signer \"example document\"."
 
-#: apps/web/src/app/(signing)/sign/[token]/signing-page-view.tsx:78
+#: apps/web/src/app/(signing)/sign/[token]/signing-page-view.tsx:80
 msgid "({0}) has invited you to approve this document"
 msgstr "({0}) vous a invité à approuver ce document"
 
-#: apps/web/src/app/(signing)/sign/[token]/signing-page-view.tsx:75
+#: apps/web/src/app/(signing)/sign/[token]/signing-page-view.tsx:77
 msgid "({0}) has invited you to sign this document"
 msgstr "({0}) vous a invité à signer ce document"
 
-#: apps/web/src/app/(signing)/sign/[token]/signing-page-view.tsx:72
+#: apps/web/src/app/(signing)/sign/[token]/signing-page-view.tsx:74
 msgid "({0}) has invited you to view this document"
 msgstr "({0}) vous a invité à consulter ce document"
 
-#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:311
+#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:313
 msgid "{0, plural, one {(1 character over)} other {(# characters over)}}"
 msgstr "{0, plural, one {(1 caractère de trop)} other {(# caractères de trop)}}"
 
@@ -84,6 +84,10 @@ msgstr "{0, plural, one {# siège} other {# sièges}}"
 msgid "{0, plural, one {<0>You have <1>1</1> pending team invitation</0>} other {<2>You have <3>#</3> pending team invitations</2>}}"
 msgstr "{0, plural, one {<0>Vous avez <1>1</1> invitation d'équipe en attente</0>} other {<2>Vous avez <3>#</3> invitations d'équipe en attente</2>}}"
 
+#: apps/web/src/app/(signing)/sign/[token]/auto-sign.tsx:196
+msgid "{0, plural, one {1 matching field} other {# matching fields}}"
+msgstr "{0, plural, one {1 champ correspondant} other {# champs correspondants}}"
+
 #: apps/web/src/app/(dashboard)/documents/[id]/edit/document-edit-page-view.tsx:129
 msgid "{0, plural, one {1 Recipient} other {# Recipients}}"
 msgstr "{0, plural, one {1 Destinataire} other {# Destinataires}}"
@@ -95,6 +99,10 @@ msgstr "{0, plural, one {En attente d'1 destinataire} other {En attente de # des
 #: apps/web/src/components/(dashboard)/settings/webhooks/trigger-multiselect-combobox.tsx:64
 msgid "{0, plural, zero {Select values} other {# selected...}}"
 msgstr "{0, plural, zero {Sélectionner des valeurs} other {# sélectionnées...}}"
+
+#: apps/web/src/app/(signing)/sign/[token]/auto-sign.tsx:193
+msgid "{0}"
+msgstr "{0}"
 
 #: apps/web/src/components/templates/manage-public-template-dialog.tsx:249
 msgid "{0} direct signing templates"
@@ -116,7 +124,7 @@ msgstr "{0} Destinataire(s)"
 #~ msgid "{0} the document to complete the process."
 #~ msgstr "{0} the document to complete the process."
 
-#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:292
+#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:294
 msgid "{charactersRemaining, plural, one {1 character remaining} other {{charactersRemaining} characters remaining}}"
 msgstr "{charactersRemaining, plural, one {1 caractère restant} other {{charactersRemaining} caractères restants}}"
 
@@ -474,6 +482,10 @@ msgstr "Une erreur est survenue lors de l'ajout de signataires."
 msgid "An error occurred while adding the fields."
 msgstr "Une erreur est survenue lors de l'ajout des champs."
 
+#: apps/web/src/app/(signing)/sign/[token]/auto-sign.tsx:154
+msgid "An error occurred while auto-signing the document, some fields may not be signed. Please review and manually sign any remaining fields."
+msgstr "Une erreur est survenue lors de la signature automatique du document, certains champs peuvent ne pas être signés. Veuillez vérifier et signer manuellement tous les champs restants."
+
 #: apps/web/src/app/(dashboard)/templates/use-template-dialog.tsx:176
 msgid "An error occurred while creating document from template."
 msgstr "Une erreur est survenue lors de la création du document à partir d'un modèle."
@@ -658,13 +670,17 @@ msgstr "Approuver"
 msgid "Approve Document"
 msgstr "Approuver le document"
 
-#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:85
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:94
 msgid "Approved"
 msgstr "Approuvé"
 
 #: apps/web/src/components/(dashboard)/settings/token/delete-token-dialog.tsx:129
 msgid "Are you sure you want to delete this token?"
 msgstr "Êtes-vous sûr de vouloir supprimer ce jeton ?"
+
+#: apps/web/src/app/(signing)/sign/[token]/reject-document-dialog.tsx:120
+msgid "Are you sure you want to reject this document? This action cannot be undone."
+msgstr "Êtes-vous sûr de vouloir rejeter ce document ? Cette action ne peut pas être annulée."
 
 #: apps/web/src/app/(dashboard)/settings/security/passkeys/user-passkeys-data-table-actions.tsx:188
 msgid "Are you sure you want to remove the <0>{passkeyName}</0> passkey."
@@ -744,7 +760,7 @@ msgstr "Bannière mise à jour"
 msgid "Basic details"
 msgstr "Détails de base"
 
-#: apps/web/src/app/(dashboard)/settings/billing/page.tsx:72
+#: apps/web/src/app/(dashboard)/settings/billing/page.tsx:74
 #: apps/web/src/app/(teams)/t/[teamUrl]/settings/billing/page.tsx:61
 #: apps/web/src/components/(dashboard)/settings/layout/desktop-nav.tsx:117
 #: apps/web/src/components/(dashboard)/settings/layout/mobile-nav.tsx:120
@@ -806,6 +822,7 @@ msgstr "En utilisant la fonctionnalité de signature électronique, vous consent
 #: apps/web/src/app/(dashboard)/templates/duplicate-template-dialog.tsx:78
 #: apps/web/src/app/(dashboard)/templates/move-template-dialog.tsx:119
 #: apps/web/src/app/(dashboard)/templates/template-direct-link-dialog.tsx:472
+#: apps/web/src/app/(signing)/sign/[token]/auto-sign.tsx:220
 #: apps/web/src/app/(signing)/sign/[token]/document-action-auth-2fa.tsx:178
 #: apps/web/src/app/(signing)/sign/[token]/document-action-auth-account.tsx:71
 #: apps/web/src/app/(signing)/sign/[token]/document-action-auth-passkey.tsx:164
@@ -813,10 +830,11 @@ msgstr "En utilisant la fonctionnalité de signature électronique, vous consent
 #: apps/web/src/app/(signing)/sign/[token]/form.tsx:151
 #: apps/web/src/app/(signing)/sign/[token]/form.tsx:220
 #: apps/web/src/app/(signing)/sign/[token]/name-field.tsx:215
-#: apps/web/src/app/(signing)/sign/[token]/number-field.tsx:327
+#: apps/web/src/app/(signing)/sign/[token]/number-field.tsx:328
+#: apps/web/src/app/(signing)/sign/[token]/reject-document-dialog.tsx:153
 #: apps/web/src/app/(signing)/sign/[token]/sign-dialog.tsx:113
 #: apps/web/src/app/(signing)/sign/[token]/signature-field.tsx:248
-#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:333
+#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:335
 #: apps/web/src/app/(teams)/t/[teamUrl]/settings/team-transfer-status.tsx:121
 #: apps/web/src/components/(dashboard)/settings/token/delete-token-dialog.tsx:176
 #: apps/web/src/components/(dashboard)/settings/webhooks/create-webhook-dialog.tsx:242
@@ -946,7 +964,7 @@ msgid "Complete Viewing"
 msgstr "Compléter la visualisation"
 
 #: apps/web/src/app/(dashboard)/templates/[id]/template-page-view-documents-table.tsx:208
-#: apps/web/src/components/(dashboard)/avatar/stack-avatars-with-tooltip.tsx:62
+#: apps/web/src/components/(dashboard)/avatar/stack-avatars-with-tooltip.tsx:77
 #: apps/web/src/components/formatter/document-status.tsx:28
 msgid "Completed"
 msgstr "Complété"
@@ -1043,7 +1061,7 @@ msgstr "Contrôle le formatage du message qui sera envoyé lors de l'invitation 
 msgid "Copied"
 msgstr "Copié"
 
-#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:133
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:162
 #: apps/web/src/app/(dashboard)/settings/public-profile/public-templates-data-table.tsx:77
 #: apps/web/src/app/(dashboard)/templates/template-direct-link-badge.tsx:31
 #: apps/web/src/app/(dashboard)/templates/template-direct-link-dialog.tsx:163
@@ -1517,6 +1535,10 @@ msgstr "Préférences de document mises à jour"
 msgid "Document re-sent"
 msgstr "Document renvoyé"
 
+#: apps/web/src/app/(signing)/sign/[token]/rejected/page.tsx:83
+msgid "Document Rejected"
+msgstr "Document rejeté"
+
 #: apps/web/src/app/(dashboard)/admin/documents/[id]/admin-actions.tsx:36
 msgid "Document resealed"
 msgstr "Document resealé"
@@ -1771,7 +1793,7 @@ msgstr "Entrez votre adresse e-mail pour recevoir le document complété."
 msgid "Enter your name"
 msgstr "Entrez votre nom"
 
-#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:278
+#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:280
 msgid "Enter your text here"
 msgstr "Entrez votre texte ici"
 
@@ -1790,6 +1812,7 @@ msgstr "Entrez votre texte ici"
 #: apps/web/src/app/(dashboard)/templates/duplicate-template-dialog.tsx:51
 #: apps/web/src/app/(dashboard)/templates/move-template-dialog.tsx:56
 #: apps/web/src/app/(dashboard)/templates/use-template-dialog.tsx:175
+#: apps/web/src/app/(signing)/sign/[token]/auto-sign.tsx:152
 #: apps/web/src/app/(signing)/sign/[token]/checkbox-field.tsx:122
 #: apps/web/src/app/(signing)/sign/[token]/checkbox-field.tsx:151
 #: apps/web/src/app/(signing)/sign/[token]/checkbox-field.tsx:212
@@ -2221,6 +2244,10 @@ msgstr "Gérer toutes les équipes avec lesquelles vous êtes actuellement assoc
 msgid "Manage and view template"
 msgstr "Gérer et afficher le modèle"
 
+#: apps/web/src/app/(dashboard)/settings/billing/page.tsx:136
+msgid "Manage billing"
+msgstr "Gérer la facturation"
+
 #: apps/web/src/components/templates/manage-public-template-dialog.tsx:341
 msgid "Manage details for this public template"
 msgstr "Gérer les détails de ce modèle public"
@@ -2241,7 +2268,7 @@ msgstr "Gérer les clés d'accès"
 msgid "Manage subscription"
 msgstr "Gérer l'abonnement"
 
-#: apps/web/src/app/(dashboard)/settings/billing/billing-portal-button.tsx:66
+#: apps/web/src/app/(dashboard)/settings/billing/billing-portal-button.tsx:67
 msgid "Manage Subscription"
 msgstr "Gérer l'abonnement"
 
@@ -2300,7 +2327,7 @@ msgstr "Membre depuis"
 msgid "Members"
 msgstr "Membres"
 
-#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:46
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:55
 #: apps/web/src/app/(dashboard)/templates/[id]/template-page-view-recipients.tsx:35
 msgid "Modify recipients"
 msgstr "Modifier les destinataires"
@@ -2394,6 +2421,10 @@ msgstr "Champ suivant"
 msgid "No active drafts"
 msgstr "Pas de brouillons actifs"
 
+#: apps/web/src/app/(signing)/sign/[token]/rejected/page.tsx:99
+msgid "No further action is required from you at this time."
+msgstr "Aucune autre action n'est requise de votre part pour le moment."
+
 #: apps/web/src/app/(teams)/t/[teamUrl]/settings/billing/page.tsx:42
 msgid "No payment required"
 msgstr "Aucun paiement requis"
@@ -2410,7 +2441,7 @@ msgstr "Aucune activité récente"
 msgid "No recent documents"
 msgstr "Aucun document récent"
 
-#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:61
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:70
 #: apps/web/src/app/(dashboard)/templates/[id]/template-page-view-recipients.tsx:49
 #: apps/web/src/components/document/document-recipient-link-copy-dialog.tsx:96
 msgid "No recipients"
@@ -2450,7 +2481,7 @@ msgstr "Non pris en charge"
 msgid "Nothing to do"
 msgstr "Rien à faire"
 
-#: apps/web/src/app/(signing)/sign/[token]/number-field.tsx:270
+#: apps/web/src/app/(signing)/sign/[token]/number-field.tsx:271
 msgid "Number"
 msgstr "Numéro"
 
@@ -2500,7 +2531,7 @@ msgstr "Seuls les responsables et au-dessus peuvent accéder et voir le document
 msgid "Oops! Something went wrong."
 msgstr "Oups ! Quelque chose a mal tourné."
 
-#: apps/web/src/components/(dashboard)/avatar/stack-avatars-with-tooltip.tsx:101
+#: apps/web/src/components/(dashboard)/avatar/stack-avatars-with-tooltip.tsx:140
 msgid "Opened"
 msgstr "Ouvert"
 
@@ -2599,7 +2630,7 @@ msgstr "Un paiement est requis pour finaliser la création de votre équipe."
 msgid "Payment overdue"
 msgstr "Paiement en retard"
 
-#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:122
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:131
 #: apps/web/src/app/(dashboard)/templates/[id]/template-page-view-documents-table.tsx:211
 #: apps/web/src/components/(teams)/tables/teams-member-page-data-table.tsx:82
 #: apps/web/src/components/(teams)/tables/user-settings-teams-page-data-table.tsx:77
@@ -2691,6 +2722,10 @@ msgstr "Veuillez noter que cette action est irréversible. Une fois confirmée, 
 #: apps/web/src/components/(teams)/dialogs/delete-team-dialog.tsx:130
 msgid "Please note that you will lose access to all documents associated with this team & all the members will be removed and notified"
 msgstr "Veuillez noter que vous perdrez l'accès à tous les documents associés à cette équipe et que tous les membres seront supprimés et notifiés"
+
+#: apps/web/src/app/(signing)/sign/[token]/reject-document-dialog.tsx:37
+msgid "Please provide a reason"
+msgstr "Veuillez fournir une raison"
 
 #: apps/web/src/components/forms/2fa/disable-authenticator-app-dialog.tsx:127
 msgid "Please provide a token from the authenticator, or a backup code. If you do not have a backup code available, please contact support."
@@ -2800,13 +2835,21 @@ msgstr "Champ en lecture seule"
 msgid "Read the full <0>signature disclosure</0>."
 msgstr "Lisez l'intégralité de la <0>divulgation de signature</0>."
 
-#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:97
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:106
 msgid "Ready"
 msgstr "Prêt"
 
 #: apps/web/src/app/(internal)/%5F%5Fhtmltopdf/certificate/page.tsx:281
 msgid "Reason"
 msgstr "Raison"
+
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:146
+msgid "Reason for rejection:"
+msgstr "Raison du rejet :"
+
+#: apps/web/src/app/(signing)/sign/[token]/reject-document-dialog.tsx:38
+msgid "Reason must be less than 500 characters"
+msgstr "La raison doit contenir moins de 500 caractères"
 
 #: apps/web/src/app/(signing)/sign/[token]/document-action-auth-dialog.tsx:62
 msgid "Reauthentication is required to sign this field"
@@ -2832,7 +2875,7 @@ msgid "Recipient updated"
 msgstr "Destinataire mis à jour"
 
 #: apps/web/src/app/(dashboard)/admin/documents/[id]/page.tsx:66
-#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:40
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:49
 #: apps/web/src/app/(dashboard)/templates/[id]/template-page-view-recipients.tsx:30
 #: apps/web/src/app/(internal)/%5F%5Fhtmltopdf/audit-log/page.tsx:139
 msgid "Recipients"
@@ -2859,6 +2902,17 @@ msgstr "Codes de récupération"
 #: apps/web/src/components/forms/v2/signup.tsx:127
 msgid "Registration Successful"
 msgstr "Inscription réussie"
+
+#: apps/web/src/app/(signing)/sign/[token]/reject-document-dialog.tsx:109
+#: apps/web/src/app/(signing)/sign/[token]/reject-document-dialog.tsx:116
+#: apps/web/src/app/(signing)/sign/[token]/reject-document-dialog.tsx:162
+msgid "Reject Document"
+msgstr "Rejeter le document"
+
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:141
+#: apps/web/src/components/(dashboard)/avatar/stack-avatars-with-tooltip.tsx:101
+msgid "Rejected"
+msgstr "Rejeté"
 
 #: apps/web/src/app/(unauthenticated)/forgot-password/page.tsx:34
 msgid "Remembered your password? <0>Sign In</0>"
@@ -2990,8 +3044,8 @@ msgid "Roles"
 msgstr "Rôles"
 
 #: apps/web/src/app/(dashboard)/templates/template-direct-link-dialog.tsx:446
-#: apps/web/src/app/(signing)/sign/[token]/number-field.tsx:336
-#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:342
+#: apps/web/src/app/(signing)/sign/[token]/number-field.tsx:337
+#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:344
 #: apps/web/src/app/(teams)/t/[teamUrl]/settings/preferences/branding-preferences.tsx:312
 #: apps/web/src/app/(teams)/t/[teamUrl]/settings/preferences/document-preferences.tsx:232
 msgid "Save"
@@ -3089,7 +3143,7 @@ msgstr "Envoi de l'e-mail de réinitialisation..."
 msgid "Sending..."
 msgstr "Envoi..."
 
-#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:92
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:101
 #: apps/web/src/app/(internal)/%5F%5Fhtmltopdf/certificate/page.tsx:248
 msgid "Sent"
 msgstr "Envoyé"
@@ -3139,6 +3193,7 @@ msgstr "Afficher des modèles dans le profil public de votre équipe pour que vo
 #: apps/web/src/app/(dashboard)/documents/data-table-action-button.tsx:114
 #: apps/web/src/app/(dashboard)/documents/data-table-action-dropdown.tsx:139
 #: apps/web/src/app/(profile)/p/[url]/page.tsx:192
+#: apps/web/src/app/(signing)/sign/[token]/auto-sign.tsx:229
 #: apps/web/src/app/(signing)/sign/[token]/document-action-auth-2fa.tsx:182
 #: apps/web/src/app/(signing)/sign/[token]/name-field.tsx:224
 #: apps/web/src/app/(signing)/sign/[token]/sign-dialog.tsx:124
@@ -3236,7 +3291,7 @@ msgstr "Signatures collectées"
 msgid "Signatures will appear once the document has been completed"
 msgstr "Les signatures apparaîtront une fois le document complété"
 
-#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:105
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:114
 #: apps/web/src/app/(internal)/%5F%5Fhtmltopdf/certificate/page.tsx:270
 #: apps/web/src/components/document/document-read-only-fields.tsx:84
 msgid "Signed"
@@ -3295,7 +3350,7 @@ msgstr "Paramètres du site"
 #: apps/web/src/app/(dashboard)/documents/delete-document-dialog.tsx:80
 #: apps/web/src/app/(dashboard)/documents/duplicate-document-dialog.tsx:72
 #: apps/web/src/app/(dashboard)/settings/billing/billing-plans.tsx:62
-#: apps/web/src/app/(dashboard)/settings/billing/billing-portal-button.tsx:50
+#: apps/web/src/app/(dashboard)/settings/billing/billing-portal-button.tsx:51
 #: apps/web/src/app/(dashboard)/settings/public-profile/public-profile-page-view.tsx:124
 #: apps/web/src/app/(dashboard)/settings/security/passkeys/user-passkeys-data-table-actions.tsx:73
 #: apps/web/src/app/(dashboard)/settings/security/passkeys/user-passkeys-data-table-actions.tsx:93
@@ -3610,8 +3665,8 @@ msgstr "Modèles"
 msgid "Templates allow you to quickly generate documents with pre-filled recipients and fields."
 msgstr "Les modèles vous permettent de générer rapidement des documents avec des destinataires et des champs pré-remplis."
 
-#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:256
-#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:272
+#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:257
+#: apps/web/src/app/(signing)/sign/[token]/text-field.tsx:274
 msgid "Text"
 msgstr "Texte"
 
@@ -3644,6 +3699,10 @@ msgstr "Le document a été déplacé avec succès vers l'équipe sélectionnée
 #: apps/web/src/app/embed/completed.tsx:29
 msgid "The document is now completed, please follow any instructions provided within the parent application."
 msgstr "Le document est maintenant complet, veuillez suivre toutes les instructions fournies dans l'application parente."
+
+#: apps/web/src/app/(signing)/sign/[token]/rejected/page.tsx:92
+msgid "The document owner has been notified of your decision. They may contact you with further instructions if necessary."
+msgstr "Le propriétaire du document a été informé de votre décision. Il peut vous contacter pour des instructions supplémentaires si nécessaire."
 
 #: apps/web/src/app/(dashboard)/templates/use-template-dialog.tsx:182
 msgid "The document was created but could not be sent to recipients."
@@ -3699,7 +3758,7 @@ msgstr "Le destinataire a été mis à jour avec succès"
 msgid "The selected team member will receive an email which they must accept before the team is transferred"
 msgstr "Le membre d'équipe sélectionné recevra un e-mail qu'il devra accepter avant que l'équipe soit transférée"
 
-#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:134
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:163
 #: apps/web/src/components/(dashboard)/avatar/avatar-with-recipient.tsx:41
 #: apps/web/src/components/document/document-recipient-link-copy-dialog.tsx:118
 msgid "The signing link has been copied to your clipboard."
@@ -4141,7 +4200,7 @@ msgstr "Impossible de se connecter"
 msgid "Unauthorized"
 msgstr "Non autorisé"
 
-#: apps/web/src/components/(dashboard)/avatar/stack-avatars-with-tooltip.tsx:116
+#: apps/web/src/components/(dashboard)/avatar/stack-avatars-with-tooltip.tsx:155
 msgid "Uncompleted"
 msgstr "Non complet"
 
@@ -4386,12 +4445,12 @@ msgstr "Voir les codes de récupération"
 msgid "View teams"
 msgstr "Voir les équipes"
 
-#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:111
+#: apps/web/src/app/(dashboard)/documents/[id]/document-page-view-recipients.tsx:120
 #: apps/web/src/app/(internal)/%5F%5Fhtmltopdf/certificate/page.tsx:259
 msgid "Viewed"
 msgstr "Vu"
 
-#: apps/web/src/components/(dashboard)/avatar/stack-avatars-with-tooltip.tsx:86
+#: apps/web/src/components/(dashboard)/avatar/stack-avatars-with-tooltip.tsx:125
 msgid "Waiting"
 msgstr "En attente"
 
@@ -4411,7 +4470,7 @@ msgstr "Vous voulez envoyer des liens de signature élégants comme celui-ci ? <
 msgid "Want your own public profile?"
 msgstr "Vous voulez votre propre profil public ?"
 
-#: apps/web/src/app/(dashboard)/settings/billing/billing-portal-button.tsx:40
+#: apps/web/src/app/(dashboard)/settings/billing/billing-portal-button.tsx:41
 #: apps/web/src/app/(teams)/t/[teamUrl]/layout-billing-banner.tsx:55
 #: apps/web/src/components/(teams)/team-billing-portal-button.tsx:31
 msgid "We are unable to proceed to the billing portal at this time. Please try again, or contact support."
@@ -4675,6 +4734,10 @@ msgstr "Essayiez-vous d'éditer ce document à la place ?"
 msgid "When you click continue, you will be prompted to add the first available authenticator on your system."
 msgstr "Lorsque vous cliquez sur continuer, vous serez invité à ajouter le premier authentificateur disponible sur votre système."
 
+#: apps/web/src/app/(signing)/sign/[token]/auto-sign.tsx:183
+msgid "When you sign a document, we can automatically fill in and sign the following fields using information that has already been provided. You can also manually sign or remove any automatically signed fields afterwards if you desire."
+msgstr "Lorsque vous signez un document, nous pouvons automatiquement remplir et signer les champs suivants à l'aide des informations déjà fournies. Vous pouvez également signer manuellement ou supprimer les champs signés automatiquement par la suite si vous le souhaitez."
+
 #: apps/web/src/app/(unauthenticated)/articles/signature-disclosure/page.tsx:36
 msgid "When you use our platform to affix your electronic signature to documents, you are consenting to do so under the Electronic Signatures in Global and National Commerce Act (E-Sign Act) and other applicable laws. This action indicates your agreement to use electronic means to sign documents and receive notifications."
 msgstr "Lorsque vous utilisez notre plateforme pour apposer votre signature électronique sur des documents, vous consentez à le faire conformément à la loi sur les signatures électroniques dans le commerce mondial et national (E-Sign Act) et aux autres lois applicables. Cette action indique votre accord à utiliser des moyens électroniques pour signer des documents et recevoir des notifications."
@@ -4744,7 +4807,7 @@ msgstr "Vous êtes sur le point de supprimer l'utilisateur suivant de <0>{teamNa
 msgid "You are about to revoke access for team <0>{0}</0> ({1}) to use your email."
 msgstr "Vous êtes sur le point de révoquer l'accès de l'équipe <0>{0}</0> ({1}) à votre e-mail."
 
-#: apps/web/src/app/(dashboard)/settings/billing/page.tsx:78
+#: apps/web/src/app/(dashboard)/settings/billing/page.tsx:80
 msgid "You are currently on the <0>Free Plan</0>."
 msgstr "Vous êtes actuellement sur le <0>Plan Gratuit</0>."
 
@@ -4796,7 +4859,7 @@ msgstr "Vous ne pouvez pas modifier un membre de l'équipe qui a un rôle plus �
 msgid "You cannot upload encrypted PDFs"
 msgstr "Vous ne pouvez pas télécharger de PDF cryptés"
 
-#: apps/web/src/app/(dashboard)/settings/billing/billing-portal-button.tsx:45
+#: apps/web/src/app/(dashboard)/settings/billing/billing-portal-button.tsx:46
 msgid "You do not currently have a customer record, this should not happen. Please contact support for assistance."
 msgstr "Vous n'avez actuellement pas de dossier client, cela ne devrait pas se produire. Veuillez contacter le support pour obtenir de l'aide."
 
@@ -4845,6 +4908,10 @@ msgstr "Vous avez atteint votre limite de documents."
 #: apps/web/src/app/(dashboard)/templates/data-table-templates.tsx:183
 msgid "You have reached your document limit. <0>Upgrade your account to continue!</0>"
 msgstr "Vous avez atteint votre limite de documents. <0>Mettez à niveau votre compte pour continuer !</0>"
+
+#: apps/web/src/app/(signing)/sign/[token]/rejected/page.tsx:88
+msgid "You have rejected this document"
+msgstr "Vous avez rejeté ce document"
 
 #: apps/web/src/components/(teams)/dialogs/leave-team-dialog.tsx:50
 msgid "You have successfully left this team."
@@ -4938,7 +5005,7 @@ msgstr "L'URL de votre site web de marque"
 msgid "Your branding preferences have been updated"
 msgstr "Vos préférences de branding ont été mises à jour"
 
-#: apps/web/src/app/(dashboard)/settings/billing/page.tsx:119
+#: apps/web/src/app/(dashboard)/settings/billing/page.tsx:125
 msgid "Your current plan is past due. Please update your payment information."
 msgstr "Votre plan actuel est en retard. Veuillez mettre à jour vos informations de paiement."
 
